@@ -21,7 +21,7 @@ COPY e4e_env.yaml /tmp/e4e_env.yaml
 # Install CUDA toolkit and Scipy
 USER jovyan
 RUN conda create --name e4e_env --file /tmp/e4e_env.yaml
-RUN conda install --name e4e_env -c conda-forge cudatoolkit scipy
+#RUN conda install --name e4e_env -c conda-forge cudatoolkit scipy
 
 # Activate the environment and install additional packages
 RUN echo "source activate e4e_env" > ~/.bashrc
